@@ -40,6 +40,8 @@ public class TabuleiroParty extends TabuleiroVersus implements Tabuleiro {
         }
         if (decksComVida.size()==1){
             System.out.println("O vencedor é o Player " +a);
+        }else{
+            System.out.println("Ainda não temos um vencedor");
         }
     }
 }
