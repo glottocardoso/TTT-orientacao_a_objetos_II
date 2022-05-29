@@ -2,10 +2,13 @@ package aula02_jogodecartas;
 
 import java.util.ArrayList;
 
-public class TabuleiroParty extends TabuleiroVersus implements Tabuleiro {
+public class TabuleiroParty implements Tabuleiro {
+
+    ArrayList<Deck> decks = new ArrayList<>();
 
     public TabuleiroParty(Deck deck1, Deck deck2,Deck deck3,Deck deck4,Deck deck5) {
-        super(deck1, deck2);
+        inserirDeck(deck1);
+        inserirDeck(deck2);
         inserirDeck(deck3);
         inserirDeck(deck4);
         inserirDeck(deck5);
@@ -21,6 +24,13 @@ public class TabuleiroParty extends TabuleiroVersus implements Tabuleiro {
             }
         }else {
             System.out.println("O deck deve ter 80 cartas");
+        }
+    }
+
+    @Override
+    public boolean verificarCartaAtaque(CartaAtaque cartaAtaque) {
+        {
+            return cartaAtaque.getVida() > 0;
         }
     }
 
