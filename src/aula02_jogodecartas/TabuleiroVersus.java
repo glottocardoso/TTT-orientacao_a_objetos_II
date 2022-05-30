@@ -5,34 +5,34 @@ import java.util.Scanner;
 
 public class TabuleiroVersus implements Tabuleiro {
 
-    ArrayList<Deck> decks = new ArrayList<>();
+    ArrayList<Player> players = new ArrayList<>();
     ArrayList<CartaAtaque> campo1 = new ArrayList<>();
     ArrayList<CartaAtaque> campo2 = new ArrayList<>();
 
 
-    public TabuleiroVersus(Deck deck1, Deck deck2) {
-        inserirDeck(deck1);
-        inserirDeck(deck2);
+    public TabuleiroVersus(Player player1, Player player2) {
+        inserirPlayer(player1);
+        inserirPlayer(player2);
     }
 
     public void popularCampo1(int carta1, int carta2, int carta3, int carta4, int carta5, int cartaEspecial1, int cartaEspecial2){
-        campo1.add(decks.get(0).cartas.get(carta1));
-        campo1.add(decks.get(0).cartas.get(carta2));
-        campo1.add(decks.get(0).cartas.get(carta3));
-        campo1.add(decks.get(0).cartas.get(carta4));
-        campo1.add(decks.get(0).cartas.get(carta5));
-        campo1.add(decks.get(0).cartas.get(cartaEspecial1));
-        campo1.add(decks.get(0).cartas.get(cartaEspecial2));
+        campo1.add(players.get(0).cartas.get(carta1));
+        campo1.add(players.get(0).cartas.get(carta2));
+        campo1.add(players.get(0).cartas.get(carta3));
+        campo1.add(players.get(0).cartas.get(carta4));
+        campo1.add(players.get(0).cartas.get(carta5));
+        campo1.add(players.get(0).cartas.get(cartaEspecial1));
+        campo1.add(players.get(0).cartas.get(cartaEspecial2));
     }
 
     public void popularCampo2(int carta1, int carta2, int carta3, int carta4, int carta5, int cartaEspecial1, int cartaEspecial2){
-        campo2.add(decks.get(1).cartas.get(carta1));
-        campo2.add(decks.get(1).cartas.get(carta2));
-        campo2.add(decks.get(1).cartas.get(carta3));
-        campo2.add(decks.get(1).cartas.get(carta4));
-        campo2.add(decks.get(1).cartas.get(carta5));
-        campo2.add(decks.get(1).cartas.get(cartaEspecial1));
-        campo2.add(decks.get(1).cartas.get(cartaEspecial2));
+        campo2.add(players.get(1).cartas.get(carta1));
+        campo2.add(players.get(1).cartas.get(carta2));
+        campo2.add(players.get(1).cartas.get(carta3));
+        campo2.add(players.get(1).cartas.get(carta4));
+        campo2.add(players.get(1).cartas.get(carta5));
+        campo2.add(players.get(1).cartas.get(cartaEspecial1));
+        campo2.add(players.get(1).cartas.get(cartaEspecial2));
     }
 
     public void batalhar(){
@@ -78,8 +78,8 @@ public class TabuleiroVersus implements Tabuleiro {
 
         verificarVencedor();
 
-        System.out.println("Vida do Player 1: " + decks.get(0).getVidaDeck());
-        System.out.println("Vida do Player 2: " + decks.get(1).getVidaDeck());
+        System.out.println("Vida do Player 1: " + players.get(0).getVidaPlayer());
+        System.out.println("Vida do Player 2: " + players.get(1).getVidaPlayer());
     }
 
     public void listarCampos(){
@@ -95,15 +95,15 @@ public class TabuleiroVersus implements Tabuleiro {
     }
 
     @Override
-    public void inserirDeck(Deck deck) {
-        if(deck.tamanhoDeck()==50) {
-            if (this.decks.size() < 2) {
-                this.decks.add(deck);
+    public void inserirPlayer(Player player) {
+        if(player.tamanhoPlayer()==50) {
+            if (this.players.size() < 2) {
+                this.players.add(player);
             } else {
                 System.out.println("Tabuleiro cheio");
             }
         }else {
-            System.out.println("O deck deve ter 50 cartas");
+            System.out.println("O player deve ter 50 cartas");
         }
     }
 
@@ -114,9 +114,9 @@ public class TabuleiroVersus implements Tabuleiro {
 
     @Override
     public void verificarVencedor() {
-        if (decks.get(0).getVidaDeck()<=0){
+        if (players.get(0).getVidaPlayer()<=0){
             System.out.println("Player 2 venceu!");
-        }else if (decks.get(2).getVidaDeck()<=0) {
+        }else if (players.get(1).getVidaPlayer()<=0) {
             System.out.println("Player 1 venceu!");
         }else {
             System.out.println("Ainda não temos um vencedor");
