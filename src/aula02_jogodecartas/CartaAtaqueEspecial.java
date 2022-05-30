@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class CartaAtaqueEspecial extends CartaAtaque implements AtaqueEspecial{
-    ArrayList<String> efeitos;
+    protected ArrayList<String> efeitos;
 
     public CartaAtaqueEspecial(String nome, String tipo, BigDecimal custo, ArrayList<String> efeitos) {
         super(nome, tipo, custo);

@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.util.Random;
 
 public class CartaAtaque extends Carta implements Ataque{
-    int poder;
-    int resistencia;
-    Random gerador = new Random();
+    protected int poder;
+    protected int resistencia;
+    protected Random gerador = new Random();
 
     public CartaAtaque(String nome, String tipo, BigDecimal custo) {
         super(nome, tipo, custo);

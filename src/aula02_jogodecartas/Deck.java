@@ -3,8 +3,8 @@ package aula02_jogodecartas;
 import java.util.ArrayList;
 
 public class Deck {
-    ArrayList<CartaAtaque> cartas;
-    public Deck(ArrayList<CartaAtaque> cartas) {
+    protected ArrayList<CartaAtaque> cartas;
+    protected Deck(ArrayList<CartaAtaque> cartas) {
         this.cartas = cartas;
     }
 
