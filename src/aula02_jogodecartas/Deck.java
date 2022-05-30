@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Deck {
     protected ArrayList<CartaAtaque> cartas;
-    protected Deck(ArrayList<CartaAtaque> cartas) {
+    public Deck(ArrayList<CartaAtaque> cartas) {
         this.cartas = cartas;
     }
 
