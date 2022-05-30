@@ -7,15 +7,15 @@ public class TabuleiroParty implements Tabuleiro {
     ArrayList<Player> players = new ArrayList<>();
 
     public TabuleiroParty(Player player1, Player player2,Player player3,Player player4,Player player5) {
-        inserirPlayer(player1);
-        inserirPlayer(player2);
-        inserirPlayer(player3);
-        inserirPlayer(player4);
-        inserirPlayer(player5);
+        inserirDeck(player1);
+        inserirDeck(player2);
+        inserirDeck(player3);
+        inserirDeck(player4);
+        inserirDeck(player5);
     }
 
     @Override
-    public void inserirPlayer(Player player) {
+    public void inserirDeck(Player player) {
         if(player.tamanhoPlayer()==80) {
             if (this.players.size() < 5) {
                 this.players.add(player);

@@ -11,8 +11,8 @@ public class TabuleiroVersus implements Tabuleiro {
 
 
     public TabuleiroVersus(Player player1, Player player2) {
-        inserirPlayer(player1);
-        inserirPlayer(player2);
+        inserirDeck(player1);
+        inserirDeck(player2);
     }
 
     public void popularCampo1(int carta1, int carta2, int carta3, int carta4, int carta5, int cartaEspecial1, int cartaEspecial2){
@@ -95,7 +95,7 @@ public class TabuleiroVersus implements Tabuleiro {
     }
 
     @Override
-    public void inserirPlayer(Player player) {
+    public void inserirDeck(Player player) {
         if(player.tamanhoPlayer()==50) {
             if (this.players.size() < 2) {
                 this.players.add(player);
