@@ -3,10 +3,10 @@ package aula02_jogodecartas;
 import java.math.BigDecimal;
 
 public abstract class Carta {
-    String nome;
-    String tipo;
-    BigDecimal custo;
-    int vida = 100;
+    protected String nome;
+    protected String tipo;
+    protected BigDecimal custo;
+    protected int vida = 100;
 
     public Carta(String nome, String tipo, BigDecimal custo) {
         this.nome = nome;
