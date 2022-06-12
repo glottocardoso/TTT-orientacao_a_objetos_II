@@ -4,7 +4,7 @@ public class Comprar{
 
     public static void comprar(Caixa caixa, Estoque estoque, Produto produto, int quantidade){
 
-        if (VerificarAdulto.verificarAdulto(produto)){
+        if (VerificarProdutoAdulto.verificarAdulto(produto)){
             Comprador comprador = ConstrutorComprador.executar();
             if (VerificarComprador.executar(comprador)){
                 produto.setQuantidade(produto.getQuantidade()-quantidade);

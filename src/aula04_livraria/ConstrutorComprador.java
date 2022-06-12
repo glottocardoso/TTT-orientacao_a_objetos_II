@@ -9,15 +9,12 @@ public class ConstrutorComprador {
         System.out.println("Produto destinado a adultos! Por favor informe os seguintes dados: ");
 
         System.out.println("Nome: ");
-        sc.nextLine();
         String nome = sc.nextLine();
 
         System.out.println("R.G.: ");
-        sc.nextLine();
         String rg = sc.nextLine();
 
         System.out.println("CPF: ");
-        sc.nextLine();
         String cpf = sc.nextLine();
 
         System.out.println("Data Nascimento - Dia: ");
@@ -29,8 +26,6 @@ public class ConstrutorComprador {
         System.out.println("Data Nascimento - Ano: ");
         int ano = sc.nextInt();
 
-        LocalDate dataNascimento = LocalDate.of(ano,mes,dia);
-
-        return new Comprador(nome,rg,cpf,dataNascimento);
+        return new Comprador(nome,rg,cpf,dia,mes,ano);
     }
 }

@@ -7,12 +7,16 @@ public class Comprador {
     String nome;
     String rg;
     String cpf;
-    LocalDate dataNascimento;
+    int diaNascimento;
+    int mesNascimento;
+    int anoNascimento;
 
-    public Comprador(String nome, String rg, String cpf, LocalDate dataNascimento) {
+    public Comprador(String nome, String rg, String cpf, int diaNascimento, int mesNascimento, int anoNascimento) {
         this.nome = nome;
         this.rg = rg;
         this.cpf = cpf;
-        this.dataNascimento = dataNascimento;
+        this.diaNascimento = diaNascimento;
+        this.mesNascimento = mesNascimento;
+        this.anoNascimento = anoNascimento;
     }
 }
