@@ -1,9 +1,8 @@
 package aula04_livraria;
 
-import java.time.Duration;
 import java.time.LocalDate;
 
-public class VerificarComprador {
+public class VerificarMaioridade {
     public static boolean executar(Comprador comprador){
         int diaAtual = LocalDate.now().getDayOfYear();
         int anoAtual = LocalDate.now().getYear();

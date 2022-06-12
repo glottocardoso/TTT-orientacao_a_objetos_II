@@ -1,20 +1,19 @@
 package aula04_livraria;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Estoque {
     private ArrayList<Produto> produtos;
 
-    public Estoque(ArrayList<Produto> produtos) {
-        this.produtos = produtos;
+    public Estoque() {
+        this.produtos = new ArrayList<>();
     }
 
-    public void interagirEstoque(AcaoProduto acaoProduto, Produto produto){
+    public void interagirEstoque(IAcaoProduto acaoProduto, Produto produto){
         setProdutos(acaoProduto.executar(getProdutos(), produto));
     }
 
-    public void visualizarEstoque(VisualizarProduto visualizarProduto){
+    public void visualizarEstoque(IVisualizarProduto visualizarProduto){
         visualizarProduto.executar(getProdutos());
     }
 

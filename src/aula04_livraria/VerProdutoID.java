@@ -3,7 +3,7 @@ package aula04_livraria;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class VerProdutoID implements VisualizarProduto {
+public class VerProdutoID implements IVisualizarProduto {
 
     @Override
     public <T extends Produto> void executar(ArrayList<T> estoque){

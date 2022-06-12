@@ -1,9 +1,8 @@
 package aula04_livraria;
 
 import java.util.ArrayList;
-import java.util.function.Consumer;
 
-public class AlterarProduto <T extends Produto> implements AcaoProduto{
+public class AlterarProduto <T extends Produto> implements IAcaoProduto {
 
     @Override
     public ArrayList<T> executar(ArrayList myList, Produto novoProduto) {
