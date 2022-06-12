@@ -134,3 +134,5 @@ o código está comentado e separado por contexto (Produto, Estoque, Caixa e Com
 2. Criação de um menu para interagir com o usuário.
 3. Não há validação de quantidade de itens em estoque antes da compra (mesmo que um produto
 esteja esgotado, não há mecanismos para lidar com essa situação).
+4. A lista de descontos é criada e preenchida na classe Comprar. Seria melhor se fosse criada e preenchida
+em uma classe separada, assim como o estoque.
