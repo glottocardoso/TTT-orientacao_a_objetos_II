@@ -91,7 +91,7 @@ public class Main {
         //CAIXA:
         Caixa caixa = new Caixa(100000);
 
-        //EXECUÇÃO:
+        //COMPRA:
         //Comprando produtos:
         System.out.println("COMPRANDO PRODUTOS===================================");
         System.out.println("Livro ID=2:");

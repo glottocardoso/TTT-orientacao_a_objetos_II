@@ -123,11 +123,14 @@ como parâmetro.
     (valorCompra).
   7. Exibe as mensagens "Compra efetuada com sucesso!" e o valor disponível no caixa, após a compra.
 
-##Execução
+## Execução
 Um exemplo completo do funcionamento do sistema está disponível na classe "Main". Basta
 executá-la para ver no console todos os seus resultados. Em alguns momentos, serão solicitadas
-algumas informações do usuário no console para execução de alguns métodos.
+algumas informações do usuário no console para execução de alguns métodos. Dentro da classe,
+o código está comentado e separado por contexto (Produto, Estoque, Caixa e Compra).
 
-##Melhorias:
+## Melhorias:
 1. O sistema ainda não contempla validações para as informações inseridas pelo usuário, no console;
 2. Criação de um menu para interagir com o usuário.
+3. Não há validação de quantidade de itens em estoque antes da compra (mesmo que um produto
+esteja esgotado, não há mecanismos para lidar com essa situação).
