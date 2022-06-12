@@ -10,6 +10,7 @@ public class DescontoLivro implements ICalcularDesconto {
 
         if (produto instanceof Livro && valorCompra > 200) {
             desoconto = valorCompra*0.15;
+            System.out.println("Você ganhou um desconto pela compra de Livros acima de R$ 200,00");
         }
         return desoconto;
     }

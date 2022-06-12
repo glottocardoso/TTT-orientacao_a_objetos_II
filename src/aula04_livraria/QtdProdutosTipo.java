@@ -9,6 +9,7 @@ public class QtdProdutosTipo<T> {
                 quantidade += produto.getQuantidade();
             };
         }
+        System.out.println("PRODUTOS POR CATEGORIA ESPECÍFICA================================");
         System.out.println("O total de produtos em estoque é: " + quantidade);
     }
 }

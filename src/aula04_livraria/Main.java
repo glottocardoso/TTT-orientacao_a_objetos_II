@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        //ESTOQUE:
         //Criando gêneros:
         ArrayList<String> generos1 = new ArrayList<>();
         generos1.add("Auto-ajuda");
@@ -17,7 +18,7 @@ public class Main {
         generos3.add("Ação");
 
         ArrayList<String> generos4 = new ArrayList<>();
-        generos4.add("Erótico");
+        generos4.add("Ficção erótica");
 
         //Criando produtos:
         Produto livro1 = new Livro("Tríade do Tempo", 35, generos1, "Christian Barbosa", "Ediouro",200);
@@ -34,33 +35,54 @@ public class Main {
         estoque.interagirEstoque(new AdicionarProduto(),jogo1);
         estoque.interagirEstoque(new AdicionarProduto(),jogo2);
 
+        System.out.println("ESTOQUE INICIAL=============================");
+        estoque.visualizarEstoque(new VerProdutosEstoque());
+
         //Removendo produtos do estoque:
         estoque.interagirEstoque(new RemoverProduto(),livro1);
+
+        System.out.println("ESTOQUE APÓS REMOÇÃO DE PRODUTO=============================");
+        estoque.visualizarEstoque(new VerProdutosEstoque());
 
         //Modificando produtos do estoque:
         livro2.setQuantidade(1100);
         estoque.interagirEstoque(new AlterarProduto(),livro2);
 
+        System.out.println("ESTOQUE APÓS MODIFICAÇÃO DE PRODUTO=============================");
+        estoque.visualizarEstoque(new VerProdutosEstoque());
+
         //Vizualizando produtos:
+        System.out.println("VIZUALIZANDO PRODUTOS DE DIVERSAS FORMAS=============================");
         estoque.visualizarEstoque(new VerProdutosEstoque());
         estoque.visualizarEstoque(new VerProdutosEstoqueCatgoria());
         estoque.visualizarEstoque(new VerProdutoID());
+
         new QtdProdutosTipo<>().executar(estoque, new Livro());
         new QtdProdutosTipo<>().executar(estoque, new Jogo());
 
         //CAIXA:
         Caixa caixa = new Caixa(100000);
 
+        //EXECUÇÃO:
         //Comprando produtos:
-        Comprar.comprar(caixa,estoque,livro2,100);
+        System.out.println("COMPRANDO PRODUTOS===================================");
+        System.out.println("Livro ID=2:");
+        Comprar.comprar(caixa,estoque,livro2,2);
 
         estoque.visualizarEstoque(new VerProdutosEstoque());
 
         //Produto adulto:
-        Produto livroAdulto = new LivroAdulto("50 Tons de Cinza", 35, generos4, "Zeca Nobre", "PlayX",10);
+        System.out.println("COMPRANDO PRODUTOS ADULTOS===================================");
+        Produto livroAdulto = new LivroAdulto("50 Tons de Cinza", 35, generos4, "E. L. James", "Intrínseca",50);
         estoque.interagirEstoque(new AdicionarProduto(),livroAdulto);
         estoque.visualizarEstoque(new VerProdutosEstoque());
 
-        Comprar.comprar(caixa,estoque,livroAdulto,100);
+        Comprar.comprar(caixa,estoque,livroAdulto,2);
+
+        estoque.visualizarEstoque(new VerProdutosEstoque());
+
+        //Comprando livro com desconto:
+        System.out.println("COMPRANDO LIVRO COM DESCONTO===================================");
+        Comprar.comprar(caixa,estoque,livro2,100);
     }
 }

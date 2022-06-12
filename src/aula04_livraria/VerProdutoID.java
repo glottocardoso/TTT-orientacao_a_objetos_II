@@ -15,6 +15,7 @@ public class VerProdutoID implements IVisualizarProduto {
         for (int i = 0; i < estoque.size(); i++) {
             produtoAtual = estoque.get(i);
             if (produtoAtual.id == id){
+                System.out.println("PRODUTO ESPECÍFICO POR ID=============================");
                 System.out.println(produtoAtual);;
             }
         }

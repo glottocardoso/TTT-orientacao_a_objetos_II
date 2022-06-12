@@ -33,7 +33,7 @@ public class Comprar{
         estoque.interagirEstoque(new AlterarProduto(),produto);
         caixa.interagirCaixa(new AdicionarCaixa(), valorCompra);
         System.out.println("Compra efetuada com sucesso!");
-        System.out.println("Dinheiro restante no caixa: " + caixa.getDinheiroPresente());
+        System.out.println("Dinheiro presente no caixa: " + caixa.getDinheiroPresente());
     }
 
     public static boolean validarCompra(ArrayList<IValidarCompra> listaDeValidacoes, Produto produto){
