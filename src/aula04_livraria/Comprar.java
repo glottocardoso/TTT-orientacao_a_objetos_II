@@ -2,7 +2,7 @@ package aula04_livraria;
 
 import java.util.ArrayList;
 
-public class Comprar{
+public abstract class Comprar{
 
     public static void comprar(Caixa caixa, Estoque estoque, Produto produto, int quantidadeComprada){
 
@@ -18,7 +18,24 @@ public class Comprar{
         }
     }
 
-    public static void efetuarCompra(Caixa caixa, Estoque estoque, Produto produto, int quantidadeComprada){
+    private static boolean validarCompra(ArrayList<IValidarCompra> listaDeValidacoes, Produto produto){
+        for (IValidarCompra validacao: listaDeValidacoes) {
+            if (!validacao.executar(produto)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static double calcularDescontos(ArrayList<ICalcularDesconto> listaDescontos, Produto produto, int quantidadeComprada){
+        double valorTotalDesconto = 0;
+        for (ICalcularDesconto desconto: listaDescontos) {
+            valorTotalDesconto+=desconto.calcularDesconto(produto,quantidadeComprada);
+        }
+        return valorTotalDesconto;
+    }
+
+    private static void efetuarCompra(Caixa caixa, Estoque estoque, Produto produto, int quantidadeComprada){
 
         //Descontos aplicados:
         ArrayList<ICalcularDesconto> listaDescontos = new ArrayList<>();
@@ -34,22 +51,5 @@ public class Comprar{
         caixa.interagirCaixa(new AdicionarCaixa(), valorCompra);
         System.out.println("Compra efetuada com sucesso!");
         System.out.println("Dinheiro presente no caixa: " + caixa.getDinheiroPresente());
-    }
-
-    public static boolean validarCompra(ArrayList<IValidarCompra> listaDeValidacoes, Produto produto){
-        for (IValidarCompra validacao: listaDeValidacoes) {
-            if (!validacao.executar(produto)){
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public static double calcularDescontos(ArrayList<ICalcularDesconto> listaDescontos, Produto produto, int quantidadeComprada){
-        double valorTotalDesconto = 0;
-        for (ICalcularDesconto desconto: listaDescontos) {
-            valorTotalDesconto+=desconto.calcularDesconto(produto,quantidadeComprada);
-        }
-        return valorTotalDesconto;
     }
 }

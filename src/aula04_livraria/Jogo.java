@@ -12,7 +12,6 @@ public class Jogo extends Produto{
 
     public Jogo(String nome, double preco, List<String> generos, String distribuidora, String estudio, int quantidade) {
         super(nome, preco,quantidade);
-        this.categoria = "Jogo";
         this.generos = generos;
         this.distribuidora = distribuidora;
         this.estudio = estudio;

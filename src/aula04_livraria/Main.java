@@ -54,7 +54,7 @@ public class Main {
         //Vizualizando produtos:
         System.out.println("VIZUALIZANDO PRODUTOS DE DIVERSAS FORMAS=============================");
         estoque.visualizarEstoque(new VerProdutosEstoque());
-        estoque.visualizarEstoque(new VerProdutosEstoqueCatgoria());
+        estoque.visualizarEstoque(new VerProdutosEstoqueCategoria());
         estoque.visualizarEstoque(new VerProdutoID());
 
         new QtdProdutosTipo<>().executar(estoque, new Livro());

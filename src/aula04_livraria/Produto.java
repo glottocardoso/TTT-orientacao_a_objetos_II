@@ -20,24 +20,11 @@ public abstract class Produto {
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
-        this.categoria = categoria;
         gerarid();
     }
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public static void setContador(int contador) {
-        Produto.contador = contador;
     }
 
     public void setQuantidade(int quantidade) {

@@ -16,7 +16,6 @@ public class Livro extends Produto{
         this.generos = generos;
         this.escritor = escritor;
         this.editora = editora;
-        this.categoria = "Livro";
     }
 
     @Override
@@ -30,17 +29,5 @@ public class Livro extends Produto{
                 ", quantidade=" + quantidade +
                 ", categoria='" + categoria + '\'' +
                 '}';
-    }
-
-    public void setGeneros(ArrayList<String> generos) {
-        this.generos = generos;
-    }
-
-    public void setEscritor(String escritor) {
-        this.escritor = escritor;
-    }
-
-    public void setEditora(String editora) {
-        this.editora = editora;
     }
 }
