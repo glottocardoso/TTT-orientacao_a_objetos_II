@@ -122,3 +122,12 @@ como parâmetro.
   6. (para que o valor seja acrescentado ao valor presente do caixa) e o valor da compra
     (valorCompra).
   7. Exibe as mensagens "Compra efetuada com sucesso!" e o valor disponível no caixa, após a compra.
+
+##Execução
+Um exemplo completo do funcionamento do sistema está disponível na classe "Main". Basta
+executá-la para ver no console todos os seus resultados. Em alguns momentos, serão solicitadas
+algumas informações do usuário no console para execução de alguns métodos.
+
+##Melhorias:
+1. O sistema ainda não contempla validações para as informações inseridas pelo usuário, no console;
+2. Criação de um menu para interagir com o usuário.

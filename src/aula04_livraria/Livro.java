@@ -21,13 +21,12 @@ public class Livro extends Produto{
     @Override
     public String toString() {
         return "Livro{ID=" + id +
+                ", nome='" + nome + '\'' +
                 ", generos=" + generos +
                 ", escritor='" + escritor + '\'' +
                 ", editora='" + editora + '\'' +
-                ", nome='" + nome + '\'' +
                 ", preco=" + preco +
                 ", quantidade=" + quantidade +
-                ", categoria='" + categoria + '\'' +
                 '}';
     }
 }

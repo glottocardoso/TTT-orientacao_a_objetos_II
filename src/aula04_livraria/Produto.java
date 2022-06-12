@@ -1,12 +1,11 @@
 package aula04_livraria;
 
 public abstract class Produto {
+    protected int id;
     protected String nome;
     protected double preco;
-    protected String categoria;
-    protected static int contador = 0;
-    protected int id;
     protected int quantidade;
+    protected static int contador = 0;
 
     public void gerarid() {
         contador++;

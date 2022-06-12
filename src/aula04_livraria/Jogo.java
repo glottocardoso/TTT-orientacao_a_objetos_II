@@ -20,12 +20,12 @@ public class Jogo extends Produto{
     @Override
     public String toString() {
         return "Jogo{ID=" + id+
+                ", nome='" + nome + '\'' +
                 ", generos=" + generos +
                 ", distribuidora='" + distribuidora + '\'' +
                 ", estudio='" + estudio + '\'' +
-                ", nome='" + nome + '\'' +
-                ", preco=" + preco +
-                ", categoria='" + categoria + '\'' +
+                ", preco='" + preco + '\'' +
+                ", quantidade=" + quantidade +
                 '}';
     }
 }

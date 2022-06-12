@@ -18,6 +18,24 @@ public class VerProdutosEstoqueCategoria implements IVisualizarProduto {
                 System.out.println(produto);
             }
         }
+        System.out.println("FILMES:");
+        for (Produto produto: estoque) {
+            if (produto instanceof Filme) {
+                System.out.println(produto);
+            }
+        }
+        System.out.println("ÁLBUNS DE MÚSICA:");
+        for (Produto produto: estoque) {
+            if (produto instanceof AlbumMusica) {
+                System.out.println(produto);
+            }
+        }
+        System.out.println("BRINQUEDOS:");
+        for (Produto produto: estoque) {
+            if (produto instanceof Brinquedo) {
+                System.out.println(produto);
+            }
+        }
     }
 
 }
